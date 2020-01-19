@@ -11,12 +11,13 @@ Total of <%= @guests.count %>
   <div class="col s12 m7">
     <div class="card horizontal">
       <div class="card-image">
-        <%= avitar_image(seed: guest.image_number) %>
+        <%= avitar_image(seed: guest.image_number, width: 150, height: 150) %>
       </div>
       <div class="card-stacked">
         <div class="card-content">
-          <span class="card-title activator grey-text text-darken-4" style="color: #<%= guest.color %> !important;">
+          <span class="card-title activator grey-text text-darken-4">
             <%= guest.name %>
+            <i class="material-icons" style="color: #<%= guest.color %> !important;">person</i>
           </span>
           <p></p>
         </div>
