@@ -1,0 +1,16 @@
+<div class="container">
+  <% flash.each do |message_type, message| %>
+    <% card_color = (message_type == 'error' || message_type == 'alert' || message_type == 'danger') ? 'red' : 'green' %>
+
+    <div class="col s12 m7">
+      <div class="card horizontal">
+        <div class="card-stacked  <%= card_color %> lighten-3">
+          <div class="card-content black-text">
+            <p><%= message %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+

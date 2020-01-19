@@ -1,0 +1,21 @@
+<% return nil unless @guest.present? %>
+
+<div class="col s12 m7">
+  <div class="card horizontal">
+    <div class="card-stacked">
+      <div class="card-content">
+        <h4>Sign the guest book</h4>
+
+        <%= form_for(@guest, url: { action: "sign" }) do |f| %>
+          <div class="form-group input-field col s12">
+            <%= label(:category, :name) %>
+            <%= f.text_field(:name, class: "form-control") %>
+          </div>
+          <button class="btn waves-effect waves-light purple" type="submit" name="action">Sign
+            <i class="material-icons right">person_add</i>
+          </button>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

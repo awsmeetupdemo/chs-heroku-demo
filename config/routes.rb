@@ -1,3 +1,7 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  root 'guest_book#index'
+
+  post   'guest_book/sign'
+  delete 'guest_book/destroy/:id', to: 'guest_book#destroy', as: 'destroy'
+  get    'guest_book/wipe',        to: 'guest_book#wipe',    as: 'wipe_book'
 end
