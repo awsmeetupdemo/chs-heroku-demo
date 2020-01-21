@@ -1,7 +1,7 @@
 <br />
 <%= render "guest_book/form" %>
 
-<a class="btn-floating btn-large waves-effect waves-light purple right" href="<%= wipe_book_path %>">
+<a class="btn-floating btn-large waves-effect waves-light <%= ChsHerokuDemo::COLOR_THEME %> right" href="<%= wipe_book_path %>">
   <i class="material-icons">delete_sweep</i>
 </a>
 <h4>Guests</h4>
@@ -25,7 +25,7 @@ Total of <%= @guests.count %>
           <%= link_to("Remove",
                       destroy_path(guest),
                       method: :delete,
-                      class: "purple-text text-darken-2") %>
+                      class: "#{ChsHerokuDemo::COLOR_THEME}-text text-darken-2") %>
         </div>
       </div>
     </div>
