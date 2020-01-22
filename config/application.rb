@@ -20,7 +20,7 @@ require "rails/test_unit/railtie"
 Bundler.require(*Rails.groups)
 
 module ChsHerokuDemo
-  COLOR_THEME = 'purple'.freeze
+  COLOR_THEME = 'blue'.freeze
 
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
